@@ -1,10 +1,10 @@
 class Solution:
     def checkString(self, s: str) -> bool:
-        a=0
-        for e in s:
-            if e=='b':
-                a=1
-            if e=='a' and a==1:
-                return False
+        flag=0
+        for letter in s:
+            if letter=='b':
+                flag=1
+            if letter=='a' and flag==1:
+                    return False
         return True
                 
