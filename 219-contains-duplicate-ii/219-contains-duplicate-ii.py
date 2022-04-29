@@ -2,7 +2,8 @@ class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
         dic={}
         for i,num in enumerate(nums):
-            if num in dic and i-dic.get(num)<=k:
-                return True
+            if num in dic:
+                if (i-dic[num])<=k:
+                    return True
             dic[num]=i
         return False
