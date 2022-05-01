@@ -4,11 +4,8 @@ class Solution:
             return False
         ori=x
         rev=0
-        while x:
+        while x>0:
             rem=x%10
             rev=rev*10+rem
             x=x//10
-        if rev==ori:
-            return True 
-        else:
-            return False
+        return ori==rev
