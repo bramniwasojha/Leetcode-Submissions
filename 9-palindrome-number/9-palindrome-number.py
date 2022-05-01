@@ -5,7 +5,8 @@ class Solution:
         ori=x
         rev=0
         while x>0:
-            rem=x%10
-            rev=rev*10+rem
-            x=x//10
-        return ori==rev
+            rev = rev*10 + x%10
+            x = x//10
+        if ori==rev:
+            return True
+        return False
