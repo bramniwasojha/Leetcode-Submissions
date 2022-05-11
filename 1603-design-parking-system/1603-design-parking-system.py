@@ -22,7 +22,8 @@ class ParkingSystem:
             if self.small>0:
                 self.small-=1
                 return True
-            return False
+            else:
+                return False
 
 # Your ParkingSystem object will be instantiated and called as such:
 # obj = ParkingSystem(big, medium, small)
