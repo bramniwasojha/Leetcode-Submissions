@@ -10,13 +10,15 @@ class ParkingSystem:
             if self.big>0:
                 self.big-=1
                 return True
-            return False
-        if carType==2:
+            else:
+                return False
+        elif carType==2:
             if self.medium>0:
                 self.medium-=1
                 return True
-            return False
-        if carType==3:
+            else:
+                return False
+        else:
             if self.small>0:
                 self.small-=1
                 return True
