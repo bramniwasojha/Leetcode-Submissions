@@ -7,9 +7,9 @@ class Solution:
         v={'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
         while i<=j:
             if s[i] in v:
-                    a+=1
+                a+=1
             if s[j] in v:
-                    b+=1
+                b+=1
             i+=1
             j-=1
         return a==b
