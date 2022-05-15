@@ -2,11 +2,14 @@ class Solution:
     def halvesAreAlike(self, s: str) -> bool:
         a=0
         b=0
-        for i in range(len(s)):
-            if i<len(s)//2:
-                if s[i]=='a' or s[i]=='e' or s[i]=='i' or s[i]=='o' or s[i]=='u' or s[i]=='A' or s[i]=='E' or s[i]=='I' or s[i]=='O' or s[i]=='U':
+        i=0
+        j=len(s)-1
+        v={'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
+        while i<=j:
+            if s[i] in v:
                     a+=1
-            else:
-                if s[i]=='a' or s[i]=='e' or s[i]=='i' or s[i]=='o' or s[i]=='u' or s[i]=='A' or s[i]=='E' or s[i]=='I' or s[i]=='O' or s[i]=='U':
+            if s[j] in v:
                     b+=1
+            i+=1
+            j-=1
         return a==b
