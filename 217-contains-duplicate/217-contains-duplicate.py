@@ -3,8 +3,10 @@ class Solution:
         hashmap={}
         for i in range(len(nums)):
             if nums[i] in hashmap:
-                if hashmap[nums[i]]!=0:
+                if hashmap[nums[i]]>0:
                     return True
+                else:
+                     hashmap[nums[i]] +=1
             else:
                 hashmap[nums[i]]=1
         return False
