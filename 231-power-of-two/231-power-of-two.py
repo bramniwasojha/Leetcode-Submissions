@@ -1,4 +1,12 @@
-import math 
+from math import log 
+import math
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
-        return n!=0 and (n&n-1)==0
+        res=1
+        while True:
+            if res==n:
+                return True
+            if res>n:
+                return False
+            res*=2
+    
