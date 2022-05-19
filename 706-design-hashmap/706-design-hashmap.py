@@ -1,7 +1,7 @@
 class MyHashMap:
 
     def __init__(self):
-        self.hmap= {}
+        self.hmap= dict()
 
     def put(self, key: int, value: int) -> None:
         self.hmap[key]=value
