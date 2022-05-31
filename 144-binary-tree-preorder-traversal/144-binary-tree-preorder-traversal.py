@@ -9,13 +9,8 @@ class Solution:
         res=[]
         def dfs(root: Optional[TreeNode]):
             if root:
-                stack = [root]
-                while len(stack):
-                    curr = stack.pop()
-                    res.append(curr.val)
-                    if curr.right:
-                        stack.append(curr.right)
-                    if curr.left:
-                        stack.append(curr.left)
+                res.append(root.val)
+                dfs(root.left)
+                dfs(root.right)
         dfs(root)
         return res
